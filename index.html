@@ -3,7 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yoga RP - YogiB</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/YBlogo.jpg" type="image/png" />
+    <title>The Realtime Yoga Assistant - YogiB</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .iframe-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .iframe-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      .iframe-container-footer {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .iframe-container-footer iframe {
+        width: 100%;
+        height: 140%;
+        border: none;
+      }
+    </style>
   </head>
-  <body></body>
+  <body class="body">
+    <nav class="navigation-container">
+      <div class="logo-container">
+        <img src="./images/YBlogo.jpg" alt="logo" />
+      </div>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Overview">Overview</a></li>
+        <li><a href="#Testimonial">Testimonial</a></li>
+        <li><a href="#Team">Our Team</a></li>
+        <li><a href="#Pricing">Pricing</a></li>
+        <li><a href="#FAQ">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="iframe-container" id="Home">
+      <iframe src="./files/landing.html"></iframe>
+    </div>
+    <div class="iframe-container" id="Overview">
+      <iframe src="./files/Features.html"></iframe>
+    </div>
+    <div class="iframe-container" id="Testimonial">
+      <iframe src="./files/testimonial.html"></iframe>
+    </div>
+    <div class="iframe-container" id="Team">
+      <iframe src="./files/ourTeam.html"></iframe>
+    </div>
+    <div class="iframe-container" id="Pricing">
+      <iframe src="./files/pricing.html"></iframe>
+    </div>
+    <div class="iframe-container" id="FAQ">
+      <iframe src="./files/faq.html"></iframe>
+    </div>
+    <div class="iframe-container-footer">
+      <iframe src="./files/footer.html"></iframe>
+    </div>
+  </body>
 </html>

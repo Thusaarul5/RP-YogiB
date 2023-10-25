@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../styles/testiminoal.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial</title>
+</head>
+
+<body>
+    <h3
+        style="justify-content: center;display: flex;word-spacing: 75%;font-size: 3.5rem;margin: 10px;font-family: Roboto Slab, serif;color: #12486b;text-decoration: bold;">
+        Our Clients Say</h3>
+        <br>
+    <div class="card-slider">
+        <div class="card-container" style="display: flex; justify-content: center;">
+            <figure class="snip1390">
+                <img src="../images/t1.jpg" alt="profile-sample3"
+                    class="profile" />
+                <figcaption>
+                    <h2>Satheesh Lokesh</h2>
+                    <h4>Student</h4>
+                    <blockquote style="height: 260px; justify-content: center;">I signed up for the YogiB in August
+                        2023. It was my first exposure to yoga and it has been a very satisfying experience.
+                        I would definitely recommend YogiB to anyone interested in taking up yoga.</blockquote>
+
+                </figcaption>
+            </figure>
+            <figure class="snip1390 hover"><img
+                    src="../images/t2.jpg" alt="profile-sample5"
+                    class="profile" />
+                <figcaption>
+                    <h2>Malshi Jeyawardhana </h2>
+                    <h4>Accountant</h4>
+                    <blockquote style="height: 260px; justify-content: center;">Experience and benefits:I absolutely
+                        love it. Great way to start the
+                        day. It has made me much fit and flexible, mentally I feel much fresher, calmer and focused.
+                    </blockquote>
+                </figcaption>
+            </figure>
+            <figure class="snip1390"><img src="../images/t3.jpg"
+                    alt="profile-sample6" class="profile" />
+                <figcaption>
+                    <h2>Sabari Senanayaka</h2>
+                    <h4>Lawer</h4>
+                    <blockquote style="height: 260px; justify-content: center;">Experience and benefits: Very good,
+                        quite informative & therapeutic
+                        It has increased my flexibility and it has
+                        also improved my concentration.</blockquote>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</body>
+<script>
+    const cardSlider = document.querySelector('.card-slider');
+    const cardWidth = cardSlider.querySelector('figure').offsetWidth;
+    let currentIndex = 0;
+
+    function slideNext() {
+        currentIndex = (currentIndex + 1) % cardSlider.children.length;
+        updateSlider();
+    }
+
+    function slidePrev() {
+        currentIndex = (currentIndex - 1 + cardSlider.children.length) % cardSlider.children.length;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const offset = -currentIndex * cardWidth;
+        cardSlider.style.transform = `translateX(${offset}px)`;
+    }
+</script>
+
+<script src="../js/testimonial.js"></script>
+
+</html>
